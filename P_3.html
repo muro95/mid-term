@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Section3</title>
+</head>
+<body>
+
+</body>
+<script>
+    let year = parseInt(prompt('Enter the Year you was born: '));
+    let month = parseInt(prompt('Enter your Month: '));
+    let day = parseInt(prompt('Enter your Day: '));
+    function checkAge(birthday) {
+        let dateDif = Date.now() - birthday.getTime();
+        let ageDate = new Date(dateDif);
+
+        return Math.abs(ageDate.getUTCFullYear() - 1970)
+
+    }
+    document.write('Your age: ' + checkAge(new Date (year, month, day)));
+    let today = new Date();
+    alert(today);
+
+</script>
+</html>
